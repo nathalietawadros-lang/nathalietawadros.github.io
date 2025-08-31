@@ -1,0 +1,16 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: linear-gradient(to right, #FDD835, #2E7D32);
+  color: white;
+}
+
+.navbar {
+  background-color: #2E7D32 !important;
+}
+
+footer {
+  background-color: #2E7D32 !important;
+}
