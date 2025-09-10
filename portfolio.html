@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathalie Tawadros | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4; /* Light green background */
+        }
+        /* Custom yellow and green theme colors */
+        .bg-custom-yellow { background-color: #FFD700; }
+        .text-custom-green { color: #228B22; }
+        .border-custom-green { border-color: #228B22; }
+        .bg-custom-green { background-color: #228B22; }
+
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #4b5563;
+        }
+
+        /* Responsive styling for blog video container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white sticky top-0 z-40 shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center text-2xl font-bold text-custom-green sm:mr-8">
+                <img src="https://www.dropbox.com/scl/fi/greeg43spb8tg5s8mrpko/NT-1.png?rlkey=kfk4wh97hxh7b39xaw7p56frk&st=np6xmw5f&dl=1" alt="Nathalie T. Logo" class="w-50 h-24 rounded-none object-contain" onerror="this.onerror=null;this.src='https://placehold.co/96x96/228B22/ffffff?text=NT+Logo';">
+            </a>
+            <div class="flex flex-col sm:flex-row items-center mt-4 sm:mt-0 space-y-2 sm:space-y-0 sm:space-x-8 text-lg font-medium">
+                <a href="#about" class="text-gray-600 hover:text-custom-green transition-colors duration-300">About</a>
+                <a href="#education" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Education</a>
+                <a href="#projects" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Projects</a>
+                <a href="#trainings" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Trainings</a>
+                <a href="#certificates" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Certificates</a>
+                <a href="#services" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Services</a>
+                <a href="#blog" class="text-gray-600 hover:text-custom-green transition-colors duration-300">Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Hero Section -->
+        <section id="about" class="flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-12">
+            <div class="text-center lg:text-left">
+                <h1 class="text-5xl lg:text-6xl font-extrabold text-custom-green leading-tight">Nathalie Tawadros</h1>
+                <h2 class="mt-4 text-2xl lg:text-3xl font-semibold text-gray-700">Energy Auditor</h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
+                    Mechanical Power Engineering Graduate and passionate energy & environmental enthusiast with hands-on experience in Water desalination and treatment, energy systems, sustainability projects, and technical analysis. Aspiring to become an energy auditor and modern energy consultant, leveraging data- driven insights, process optimization, and technical design to reduce emissions, improve energy efficiency, and support green transitions.
+                </p>
+                <div class="mt-8 flex justify-center lg:justify-start space-x-4">
+                    <a href="https://www.linkedin.com/in/nathalie-tawadros-344584245/" target="_blank" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-green-700">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+            <!-- Photo -->
+            <div class="flex-shrink-0 w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-lg">
+                <img src="https://www.dropbox.com/scl/fi/ulpdvd3a6kvi86a69k12e/1750943698579.jpeg?rlkey=kp24kelsd9t7lg3d5l3ptdhsb&st=81qtpmx7&dl=1" alt="Nathalie Tawadros holding her thesis." class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x600/228B22/ffffff?text=Nathalie+Tawadros';">
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-green flex flex-col items-center text-center">  
+                    <img src="https://www.dropbox.com/scl/fi/mjwb8ic020q8hejy8c3oq/9.png?rlkey=vpty34zxphuzrop3pb6ywd4f0&st=0ed4g6un&dl=1" alt="Ain Shams University Logo" class="w-16 h-16 rounded-full mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/228B22/ffffff?text=AS';">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        B.S., Mechanical Power Engineering
+                    </h3>
+                    <p class="text-gray-600 mt-1">Ain Shams University, Cairo, Egypt</p>
+                    <p class="text-sm text-gray-500 mt-1">Sep 2020 - Jun 2025</p>
+                    <p class="text-gray-700 mt-4">Relevant GPA: 3.53/4.0 (last 84 credit hours)</p>
+                    <p class="text-gray-700 mt-2">Ranked <strong>26 out of 136</strong> students, placing me in the <strong>19th percentile</strong> of my class.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-green flex flex-col items-center text-center">
+                    <img src="https://www.dropbox.com/scl/fi/70wtq36my0ljl0sc89xwl/unimr_lead_imagec.jpg?rlkey=zxx94mx9sri49n3s16e9id77x&st=z6si55lr&dl=1" alt="Philipps-Universität Marburg Logo" class="w-16 h-16 rounded-full mb-2 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/228B22/ffffff?text=UM';">
+                    <h3 class="text-2xl font-bold text-gray-800">Virtual Exchange Semester</h3>
+                    <p class="text-gray-600 mt-1">Philipps-Universität Marburg, Germany</p>
+                    <p class="text-sm text-gray-500 mt-1">Apr 2025 - Aug 2025</p>
+                    <p class="text-gray-700 mt-4">GPA equivalent: 4.00/4.00</p>
+                    <p class="text-gray-700 mt-2">Focused on <strong>resource criticality, circular economy, Life Cycle Assessment (LCA),</strong> and <strong>material defects</strong> in addition to sustainability in materials and energy, solar PV scaling, and semiconductors.</p>
+                </div>
+            </div>
+        </section>
+
+<!-- Trainings Section -->
+        <section id="trainings">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Trainings</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Women in Power Program', 'GIZ', 'Jun 2025 - Nov 2025', 'Completed intensive training in energy auditing, data analysis, and technical system optimization (compressors, pumps, steam, motors). Prepared for ISO 50001 certification and developed business skills to launch an independent energy consulting practice.', 'https://www.dropbox.com/scl/fi/vmbsijt1z0756a0l6rscr/images-8.png?rlkey=2gg4jqw0joiu8yi2l5l2bsybn&st=shsswasb&dl=1', 'https://www.dropbox.com/scl/fi/bealxhwf57zp6bgd53dzf/WhatsApp-Image-2025-09-01-at-10.49.15-AM.jpeg?rlkey=dah6aokwsqi49dy34ztc2x0co&st=iz4ju8sl&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/vmbsijt1z0756a0l6rscr/images-8.png?rlkey=2gg4jqw0joiu8yi2l5l2bsybn&st=shsswasb&dl=1" alt="GIZ Logo" class="w-16 h-16 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=GIZ';">
+                    <h3 class="text-xl font-bold text-gray-800">Women in Power Program</h3>
+                    <p class="text-gray-600">GIZ</p>
+                    <p class="text-sm text-gray-500 mt-1">Jun 2025 - Nov 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Business Development Engineer Intern', 'Integral Rise', 'Aug 2025 - Sep 2025', 'Secured collaborations by writing targeted proposals and addressing client needs in the energy and renewable energy sectors. Conducted market analysis to identify new leads and secured collaborations with partners in Jordan and Zambia, significantly expanding the company\'s network in the energy sector.', 'https://www.dropbox.com/scl/fi/ij1fuetj2v4zu4pzz8ie6/integral_rise_logo.jpeg?rlkey=jtdiv8r6gq8efll3bzgconjf6&st=mxelz7k1&dl=1', null, null);">
+                    <img src="https://www.dropbox.com/scl/fi/ij1fuetj2v4zu4pzz8ie6/integral_rise_logo.jpeg?rlkey=jtdiv8r6gq8efll3bzgconjf6&st=mxelz7k1&dl=1" alt="Integral Rise Logo" class="w-23 h-20 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Integral Rise';">
+                    <h3 class="text-xl font-bold text-gray-800">Business Development Engineer Intern</h3>
+                    <p class="text-gray-600">Integral Rise</p>
+                    <p class="text-sm text-gray-500 mt-1">Aug 2025 - Sep 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - ECOPulz Training', 'Green Hydrogen & Sustainable Leadership', 'Jul 2025 - Oct 2025', 'Completed intensive technical training on green hydrogen production and market viability. Developed professional skills in leadership and sustainable thinking, and engaged with the Embassy of the Netherlands on their national hydrogen strategy.', 'https://www.dropbox.com/scl/fi/w6kzme3uyxbsh88ih3rtd/cropped-Favicon-Ecopulz.png?rlkey=lesvmxzoe91mz7zi4l05ivio2&st=nuopwcxn&dl=1', 'https://www.dropbox.com/scl/fi/mq2k7lnr5kmimenaa7lfc/1755510592951.jpeg?rlkey=4r1rzn32zlnunanrdr73rv6a9&st=9qz8wzvy&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/w6kzme3uyxbsh88ih3rtd/cropped-Favicon-Ecopulz.png?rlkey=lesvmxzoe91mz7zi4l05ivio2&st=nuopwcxn&dl=1" alt="Ecopulz Logo" class="w-16 h-16 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Ecopulz';">
+		    <h3 class="text-xl font-bold text-gray-800">ECOPulz Training</h3>
+                    <p class="text-gray-600">Green Hydrogen & Sustainable Leadership</p>
+                    <p class="text-sm text-gray-500 mt-1">Jul 2025 - Oct 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Exchange Student', 'DAAD Scholarship - TUHH Hamburg, Germany', 'Jun 2024 - Aug 2024', 'Developed and validated an AI model to predict CO2 emissions in a biomass power plant using Python, linear/multilinear regression, and random forest algorithms. Conducted advanced data analysis to identify key factors influencing emissions, directly supporting efforts to enhance sustainable energy production. Contributed to a green hydrogen project, focusing on CO2 capture and methane production to advance carbon reduction strategies and enhance overall project efficiency.', 'https://www.dropbox.com/scl/fi/at9z2rfec7y9fmx7477y6/daad.jpg?rlkey=d9bav5au8i2ecrr1cuwk1hew5&st=s833k8vr&dl=1', 'https://www.dropbox.com/scl/fi/u3ytwwzd6o3prqdi4yzgf/1723458763890.jpeg?rlkey=19vuoi744x9lwpfvt76193pan&st=1iwahf16&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/at9z2rfec7y9fmx7477y6/daad.jpg?rlkey=d9bav5au8i2ecrr1cuwk1hew5&st=s833k8vr&dl=1" alt="DAAD Logo" class="w-23 h-20 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=DAAD';">
+                    <h3 class="text-xl font-bold text-gray-800">Exchange Student</h3>
+                    <p class="text-gray-600">DAAD Scholarship - TUHH Hamburg, Germany</p>
+                    <p class="text-sm text-gray-500 mt-1">Jun 2024 - Aug 2024</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Beko Award Winner', 'Ain Shams University Clean Energy Shelter Project', 'Feb 2024 - Jun 2024', 'Secured national recognition for designing a sustainable energy system to provide power to humanitarian shelters. Engineered a gas turbine power plant fueled by bio-methane from agricultural and sanitary waste, employing DWsim for process simulation. Integrated cogeneration and renewable energy systems, prioritizing efficiency and resilience while showcasing advanced research and project management skills.', 'https://www.dropbox.com/scl/fi/pnwbw5qazmnhgwiktt29t/download-10.png?rlkey=59eg5n6nmn4p8ri24t78q5j8u&st=xbsa0lyk&dl=1' ,'https://www.dropbox.com/scl/fi/0bszlcsf44tgs1gyb08hu/1755783953770.jpeg?rlkey=se09l2mzhgm316x685pdvgxix&st=oa5mxj9p&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/pnwbw5qazmnhgwiktt29t/download-10.png?rlkey=59eg5n6nmn4p8ri24t78q5j8u&st=xbsa0lyk&dl=1" alt="Beko Logo" class="w-28 h-23  rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Beko';">
+                    <h3 class="text-xl font-bold text-gray-800">Beko Award Winner</h3>
+                    <p class="text-gray-600">Ain Shams University Clean Energy Shelter Project</p>
+                    <p class="text-sm text-gray-500 mt-1">Feb 2024 - Jun 2024</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Research Associate', 'ETCC Lab', 'Feb 2024 - Jun 2024', 'Conducted research on icing formations on wind masts to improve data accuracy and system reliability in wind energy applications. Applied research skills to a complex problem in renewable energy.', 'https://www.dropbox.com/scl/fi/mj7nvquavypyvcjilldt8/1701608650140.jpeg?rlkey=w2b46nceat0o1iwa631bd9bi1&st=wwf8293t&dl=1', null, null);">
+                    <img src="https://www.dropbox.com/scl/fi/mj7nvquavypyvcjilldt8/1701608650140.jpeg?rlkey=w2b46nceat0o1iwa631bd9bi1&st=wwf8293t&dl=1" alt="ETCC Logo" class="w-28 h-23 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=ETCC';">
+                    <h3 class="text-xl font-bold text-gray-800">Research Associate</h3>
+                    <p class="text-gray-600">ETCC Lab</p>
+                    <p class="text-sm text-gray-500 mt-1">Feb 2024 - Jun 2024</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - Robotics Instructor', 'Engineeius', 'Dec 2023 - Feb 2024', 'Led STEM-based workshops for students, teaching foundational skills in Arduino, robotics, and control systems.', 'https://www.dropbox.com/scl/fi/83kbi4ml9f3vxs59753se/1656251086466.jpeg?rlkey=9n5k9i1kzhi2ny1zafwn8mv97&st=f7sed6zm&dl=1', 'https://www.dropbox.com/scl/fi/8eaa8jxeybmmapekxwtdn/rob.PNG?rlkey=6ppdidu5pxqdof9g17fffstsk&st=llrk1vcz&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/83kbi4ml9f3vxs59753se/1656251086466.jpeg?rlkey=9n5k9i1kzhi2ny1zafwn8mv97&st=f7sed6zm&dl=1" alt="Engineeius Logo" class="w-28 h-23 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Engineeius ';">
+                    <h3 class="text-xl font-bold text-gray-800">Robotics Instructor</h3>
+                    <p class="text-gray-600">Engineeius</p>
+                    <p class="text-sm text-gray-500 mt-1">Dec 2023 - Feb 2024</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Training - MEP Intern', 'Monorail Project Orascom Construction', 'Jul 2023 - Aug 2023', 'Assisted with the implementation of MEP systems on the Monorail Project, gaining practical experience in system design, installation, and optimization. Developed a strong grasp of the project\'s business model and financial drivers, bridging the gap between engineering and project management.','https://www.dropbox.com/scl/fi/n4iy4it7ecuqotfdp4dr8/download-12.png?rlkey=0dlfuj7781x3o8tojmhi32unv&st=pcp9u0jq&dl=1', 'https://www.dropbox.com/scl/fi/iro2ps0gh6bxumz4lcfvh/oras.PNG?rlkey=f0ldzfal9lpwq73vkgih214eu&st=gfy5i7h8&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/n4iy4it7ecuqotfdp4dr8/download-12.png?rlkey=0dlfuj7781x3o8tojmhi32unv&st=pcp9u0jq&dl=1" alt="Orascom Logo" class="w-28 h-23 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Orascom ';">
+                    <h3 class="text-xl font-bold text-gray-800">MEP Intern - Monorail Project</h3>
+                    <p class="text-gray-600">Orascom Construction</p>
+                    <p class="text-sm text-gray-500 mt-1">Jul 2023 - Aug 2023</p>
+                </div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Graduation Project - CO2-to-Methane Sabatier Reactor', 'Ain Shams University', 'Oct 2024 - Jun 2025', 'Designed a Sabatier reactor to capture industrial CO2 and convert it into methane using green hydrogen. Used Ansys Fluent and Aspen Plus to model and optimize the process, achieving a 96% CO2 conversion rate. Developed a carbon-neutral fuel system, aligning with national hydrogen strategies.', null, 'https://www.dropbox.com/scl/fi/h84g30wpw7q29y2p2w86k/1750935900426.jpeg?rlkey=s8h23u1lzzia6bdwt5xle3om8&st=6cnx96yq&dl=1', null);">
+                    
+                    <h3 class="text-xl font-bold text-gray-800">CO2-to-Methane Sabatier Reactor</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                    <p class="text-sm text-gray-500 mt-1">Oct 2024 - Jun 2025</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Project - Water Desalination System Design', 'Ain Shams University', '', 'Engineered a medium-scale brackish water desalination plant, focusing on thermal integration for optimal energy use.', null, 'https://www.dropbox.com/scl/fi/76bicq42xkxu21up7rkk5/water.PNG?rlkey=qbwbw3h5uwm630iancwmzam2z&st=4pyum04v&dl=1', null);">
+                    <h3 class="text-xl font-bold text-gray-800">Water Desalination System Design</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Project - HVAC System Design', 'Ain Shams University', '', 'Performed full HVAC load calculation and system selection for a multi-room apartment under specified conditions. Sized ductwork and selected appropriate system types to ensure energy efficiency and thermal comfort.', null, null, null);">
+                    <h3 class="text-xl font-bold text-gray-800">HVAC System Design for Residential Building</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Project - Hydro System Level Control', 'Ain Shams University', '', 'Developed a model-based automation system using MATLAB and Modelica to control tank levels and pump operations with PID control logic, improving system stability and accuracy.', null, 'https://www.dropbox.com/scl/fi/1mrqjv0fki843xkt7fka3/Capture.PNG?rlkey=yrn6cwj46zx7nseg739vbb39k&st=tmoi4007&dl=1', null);">
+                    <h3 class="text-xl font-bold text-gray-800">Hydro System Level Control</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Project - PLC for Factory Automation', 'Ain Shams University', '', 'Designed and built a PLC system for factory automation, implementing a ladder diagram to control and monitor industrial processes using Siemens TIA Portal and Factory I/O.', null, null, null);">
+                    <h3 class="text-xl font-bold text-gray-800">PLC for Factory Automation</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Project - BIM-Based HVAC & Plumbing System Design', 'Ain Shams University', '', 'Used Revit to design HVAC and plumbing layouts, focusing on thermal transfer through walls and window positioning. Integrated system planning for comfort, efficiency, and space utilization in a building model.', null, null, null);">
+                    <h3 class="text-xl font-bold text-gray-800">BIM-Based HVAC & Plumbing System Design</h3>
+                    <p class="text-gray-600">Ain Shams University</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Certificates Section (formerly Courses) - Descriptions and images are now in a modal -->
+        <section id="certificates">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Certificates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Certificate - Renewable Energy Technology Fundamentals', 'Coursera (University of Colorado Boulder)', 'Aug 2025', ' Gained a solid understanding of grid integration, the duck curve, and the technical and market fundamentals of a renewable-powered future.', 'https://www.dropbox.com/scl/fi/ntinkfthmpnzi11cdvqoh/download-15.png?rlkey=itxhjan00wmuz5d8goj7ovknd&st=1puszszz&dl=1', 'https://www.dropbox.com/scl/fi/qxgu0xtpeoxyxgxgbqab3/cert.PNG?rlkey=9lvduwhi0gos0eyktyny2irt5&st=3r11z7k2&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/ntinkfthmpnzi11cdvqoh/download-15.png?rlkey=itxhjan00wmuz5d8goj7ovknd&st=1puszszz&dl=1" alt="Colorado University Logo" class="w-23 h-20 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Colorado ';">
+                    <h3 class="text-xl font-bold text-gray-800">Renewable Power and Electricity Systems</h3>
+                    <p class="text-gray-600">Coursera (University of Colorado Boulder)</p>
+                    <p class="text-sm text-gray-500 mt-1">Sep 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Certificate - Renewable Energy Technology Fundamentals', 'Coursera (University of Colorado Boulder)', 'Aug 2025', 'Gained foundational knowledge of key renewable energy sources, including solar, wind, hydro, and geothermal power.', 'https://www.dropbox.com/scl/fi/ntinkfthmpnzi11cdvqoh/download-15.png?rlkey=itxhjan00wmuz5d8goj7ovknd&st=1puszszz&dl=1', 'https://www.dropbox.com/scl/fi/bne6g7106zkyg3g4i10xm/1.jpeg?rlkey=i6vuryykayl3jbx0x9olrrlw5&st=fci3azv8&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/ntinkfthmpnzi11cdvqoh/download-15.png?rlkey=itxhjan00wmuz5d8goj7ovknd&st=1puszszz&dl=1" alt="Colorado University Logo" class="w-23 h-20 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Colorado ';">
+                    <h3 class="text-xl font-bold text-gray-800">Renewable Energy Technology Fundamentals</h3>
+                    <p class="text-gray-600">Coursera (University of Colorado Boulder)</p>
+                    <p class="text-sm text-gray-500 mt-1">Aug 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Certificate - Life Cycle Assessment (LCA) Certification', 'Ecochain Academy', 'Jul 2025', 'Completed training on LCA principles, including environmental impact analysis and carbon footprinting.', 'https://www.dropbox.com/scl/fi/db283wq96pjyqtm75brs2/download-13.png?rlkey=cz4flqa9uvfxqcmqnvmtk1o1k&st=ygvbc07z&dl=1', 'https://www.dropbox.com/scl/fi/7kh8yymvmaf6urzskpyk7/1752698280371.jpeg?rlkey=9c4v374vl32wye2bxvxga1bur&st=jsmmjwbo&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/db283wq96pjyqtm75brs2/download-13.png?rlkey=cz4flqa9uvfxqcmqnvmtk1o1k&st=ygvbc07z&dl=1" alt="Ecochain Logo" class="w-23 h-20 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Ecochain ';">
+                    <h3 class="text-xl font-bold text-gray-800">Life Cycle Assessment (LCA) Certification</h3>
+                    <p class="text-gray-600">Ecochain Academy</p>
+                    <p class="text-sm text-gray-500 mt-1">Jul 2025</p>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="showModal('Certificate - Python Trainee', 'Simplilearn', 'Nov 2024', 'Gained foundational knowledge of Python and key libraries for data analysis and visualization, including Pandas, NumPy, and Matplotlib.', 'https://www.dropbox.com/scl/fi/rlov0b508pr4a2vxzms1v/download-14.png?rlkey=6iep4si7rfy3l3bgajwpfnrgi&st=r57bfd6m&dl=1', 'https://www.dropbox.com/scl/fi/8ipjkx1ean63vbo8wlr6i/7577605_76603501732070619692.png?rlkey=innqx4t6ep3njf1ywuiu53xfq&st=529dgx8x&dl=1', null);">
+                    <img src="https://www.dropbox.com/scl/fi/rlov0b508pr4a2vxzms1v/download-14.png?rlkey=6iep4si7rfy3l3bgajwpfnrgi&st=r57bfd6m&dl=1" alt="Simplilearn Logo" class="w-28 h-23 rounded-full mb-2 object-cover mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=Simplilearn ';">
+                    <h3 class="text-xl font-bold text-gray-800">Python Trainee</h3>
+                    <p class="text-gray-600">Simplilearn</p>
+                    <p class="text-sm text-gray-500 mt-1">Nov 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">My Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-service="ghg" class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold text-gray-800">GHG Reporting & Carbon Accounting</h3>
+                </div>
+                <div data-service="energy-audit" class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold text-gray-800">Energy Auditing</h3>
+                </div>
+                <div data-service="feasibility" class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold text-gray-800">Feasibility Studies</h3>
+                </div>
+                <div data-service="technical-design" class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-custom-yellow transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <h3 class="text-2xl font-bold text-gray-800">Technical Design & Analysis</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Blog Section -->
+        <section id="blog">
+            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Weekly Sustainability Blog</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+                <p class="text-lg text-gray-700">
+                    Welcome to my sustainability blog! Here I'll share weekly insights, videos, and discussions on a range of topics including clean energy, carbon capture, and water technology.
+                </p>
+                <div class="mt-6 flex flex-col items-center justify-center space-y-4">
+                    <div class="w-full max-w-lg video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen hidden></iframe>                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-custom-green text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Nathalie Tawadros. All rights reserved.</p>
+            <p class="mt-2">Email: <a href="mailto:Nmld2002@gmail.com" class="underline hover:text-gray-300">Nmld2002@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Modals for details -->
+    <div id="modal" class="modal-container">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-content-inner"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content-inner');
+        const closeButton = document.querySelector('.close-button');
+
+        function showModal(title, org, dates, description, logoUrl, imageUrl, pdfUrl) {
+            let modalHtml = `
+                <div class="text-center">
+            `;
+            if (logoUrl) {
+                modalHtml += `
+                    <div class="flex justify-center items-center mb-4">
+                        <img src="${logoUrl}" alt="${org} Logo" class="w-16 h-16 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/64x64/EAB308/ffffff?text=${org.charAt(0)}';">
+                    </div>
+                `;
+            }
+            modalHtml += `
+                    <h3 class="text-3xl font-bold text-custom-green mb-4">${title}</h3>
+                    <p class="text-gray-600 mb-2">${org} | ${dates}</p>
+            `;
+            if (imageUrl) {
+                modalHtml += `
+                    <div class="flex justify-center items-center mb-4">
+                        <img src="${imageUrl}" alt="${title} Image" class="rounded-lg max-h-96 w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/228B22/ffffff?text=Image+Unavailable';">
+                    </div>
+                `;
+            }
+            modalHtml += `
+                    <p class="text-gray-700">${description}</p>
+            `;
+            if (pdfUrl) {
+                 modalHtml += `
+                    <a href="${pdfUrl}" target="_blank" class="mt-4 inline-block bg-custom-green text-white font-bold py-2 px-4 rounded-full hover:bg-green-700 transition-colors duration-300">View Sample PDF</a>
+                `;
+            }
+            modalHtml += `
+                </div>
+            `;
+            modalContent.innerHTML = modalHtml;
+            modal.style.display = 'flex';
+        }
+
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Modal function for services
+        function showServiceModal(title, description, imageUrl, pdfUrl) {
+             let modalHtml = `
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-custom-green mb-4">${title}</h3>
+            `;
+            if (imageUrl) {
+                modalHtml += `
+                    <div class="flex justify-center items-center mb-4">
+                        <img src="${imageUrl}" alt="${title} Image" class="rounded-lg max-h-96 w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/600x400/228B22/ffffff?text=Image+Unavailable';">
+                    </div>
+                `;
+            }
+            modalHtml += `
+                    <p class="text-gray-700">${description}</p>
+            `;
+            if (pdfUrl) {
+                 modalHtml += `
+                    <a href="${pdfUrl}" target="_blank" class="mt-4 inline-block bg-custom-green text-white font-bold py-2 px-4 rounded-full hover:bg-green-700 transition-colors duration-300">View Sample PDF</a>
+                `;
+            }
+            modalHtml += `
+                </div>
+            `;
+            modalContent.innerHTML = modalHtml;
+            modal.style.display = 'flex';
+        }
+        
+        const servicesData = {
+            'ghg': {
+                title: "GHG Reporting & Carbon Accounting",
+                details: "The process of measuring, quantifying, and documenting all GHG emissions from an organization's activities and value chain, similar to financial accounting.",
+                imageSrc: "https://www.dropbox.com/scl/fi/qclvkzf7m7febnf7edxnn/_-visual-selection-5.png?rlkey=awe72pzr5t3w3tumjwpa1jpje&st=uemjuav2&dl=1",
+                imageAlt: "A visual representation of GHG Reporting & Carbon Accounting.",
+                pdfUrl: "https://www.africau.edu/images/default/sample.pdf"
+            },
+            'energy-audit': {
+                title: "Energy Auditing",
+                details: "An energy audit is a systematic inspection, survey, and analysis of how energy is used and wasted in a building or facility to identify opportunities for cost reduction and improved energy efficiency.",
+                imageSrc: "https://www.dropbox.com/scl/fi/n2ezy8sco6gprjj5zl52k/_-visual-selection-4.png?rlkey=3kudvsq9l2iscba7ybteexpkg&st=nudn74si&dl=1",
+                imageAlt: "A visual representation of an energy audit.",
+                pdfUrl: null
+            },
+            'feasibility': {
+                title: "Feasibility Studies",
+                details: "A comprehensive analysis conducted to determine if a proposed project or business venture is likely to succeed by exploring its viability from different angles, including technical, economic, and operational perspectives.",
+                imageSrc: "https://www.dropbox.com/scl/fi/zj93ofmkvn5930k2n611h/_-visual-selection-6.png?rlkey=7vwzklen2axvmgikyquj5rt6n&st=itco65ey&dl=1",
+                imageAlt: "A visual representation of a feasibility study.",
+                pdfUrl: null
+            },
+            'technical-design': {
+                title: "Technical Design & Analysis",
+                details: "The process of creating detailed plans and specifications for a system or component to meet specific technical requirements, often involving calculations, simulations, and data-driven analysis to ensure optimal performance and efficiency.",
+                imageSrc: "https://www.dropbox.com/scl/fi/leirft9x79ml5q927q1ay/_-visual-selection-7.png?rlkey=yzn8itwo4np1edv8iywvlnnjx&st=1estiy46&dl=1",
+                imageAlt: "A visual representation of technical design and analysis.",
+                pdfUrl: null
+            }
+        };
+
+        document.getElementById('services').querySelectorAll('div[data-service]').forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceKey = card.dataset.service;
+                const data = servicesData[serviceKey];
+                if (data) {
+                    showServiceModal(data.title, data.details, data.imageSrc, data.pdfUrl);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
