@@ -285,18 +285,29 @@
         </section>
 
         <!-- Weekly Blog Section -->
-        <section id="blog">
-            <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Weekly Sustainability Blog</h2>
-            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
-                <p class="text-lg text-gray-700">
-                    Welcome to my sustainability blog! Here I'll share weekly insights, videos, and discussions on a range of topics including clean energy, carbon capture, and water technology.
-                </p>
-                <div class="mt-6 flex flex-col items-center justify-center space-y-4">
-                    <div class="w-full max-w-lg video-container">
-                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen hidden></iframe>                    </div>
-                </div>
+<section id="blog">
+    <h2 class="text-4xl font-bold text-center text-custom-green mb-10">Weekly Sustainability Blog</h2>
+    <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+        <p class="text-lg text-gray-700">
+            Welcome to my sustainability blog! Here I'll share weekly insights, videos, and discussions on a range of topics including clean energy, carbon capture, and water technology.
+        </p>
+
+        <div id="video-post-container" class="mt-6 flex flex-col items-center justify-center space-y-4">
+            <div class="w-full max-w-lg video-container">
+                <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </section>
+        </div>
+
+        <div id="written-post-container" class="mt-6 text-left hidden">
+            <h3 class="text-2xl font-bold text-custom-green mb-4">Blog Post Title Here</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Add your blog post content here. You can write as many paragraphs as you need. This is where your written articles will go.
+            </p>
+            <p class="text-sm text-gray-500 mt-4">Posted on [Date]</p>
+        </div>
+
+    </div>
+</section>
     </main>
 
     <!-- Footer -->
@@ -436,9 +447,31 @@
                 }
             });
         });
+
+    // This function shows or hides the blog sections
+    function showBlog(type) {
+        const videoSection = document.getElementById('video-post-container');
+        const writtenSection = document.getElementById('written-post-container');
+
+        if (type === 'video') {
+            videoSection.classList.remove('hidden');
+            writtenSection.classList.add('hidden');
+        } else if (type === 'written') {
+            videoSection.classList.add('hidden');
+            writtenSection.classList.remove('hidden');
+        }
+    }
+
+    // Call the function when the page loads to display the default blog type
+    // To show the video by default, use:
+    showBlog('video');
+
+    // To show the written post by default, use:
+    // showBlog('written');
     </script>
 </body>
 </html>
+
 
 
 
